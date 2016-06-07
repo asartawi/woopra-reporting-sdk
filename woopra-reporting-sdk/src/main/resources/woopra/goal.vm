@@ -1,0 +1,14 @@
+{
+      "operator": "$operator",
+      "name": "$name",
+        filters: [    
+           #set( $count = 1 )
+           #foreach( $filter in $filters )
+				$filter
+				#if( $count < $filters.size())
+					,
+				#end
+				#set( $count = $count + 1 )
+			#end 
+		]
+}

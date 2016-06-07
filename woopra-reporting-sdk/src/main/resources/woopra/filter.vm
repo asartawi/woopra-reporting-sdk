@@ -1,0 +1,6 @@
+{
+	"scope": "$scope",
+	"match": "$match",
+	"value": "$value",
+	"key": "$key"
+}

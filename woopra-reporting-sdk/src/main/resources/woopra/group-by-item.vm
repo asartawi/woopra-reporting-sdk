@@ -1,0 +1,16 @@
+{
+	"scope": "$scope",
+	"key": "$key",
+	"transforms":
+	[
+		#set( $count = 1 )
+    	#foreach( $transform in $transforms )
+    		$transform
+    	    #if( $count < $transforms.size())
+    	    ,
+    		#end
+    		
+    		#set( $count = $count + 1 )
+  		#end   
+	]
+}

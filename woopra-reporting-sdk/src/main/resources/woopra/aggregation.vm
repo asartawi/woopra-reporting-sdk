@@ -1,0 +1,6 @@
+{
+                "method": "$method",
+                "by": "$by", // property of the action matching in "actions"
+                "match": "$match", // equivalent to "greater than or equals" or "at least"
+                "value": $value
+}

@@ -1,0 +1,13 @@
+{
+	"function": "$function",
+	"params": [
+	           #set( $count = 1 )
+				#foreach( $param in $params )
+    					$param
+    	    			#if( $count < $params.size())
+    	    				,
+    					#end
+    					#set( $count = $count + 1 )
+  					#end   
+              ]
+}

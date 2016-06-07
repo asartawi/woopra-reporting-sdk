@@ -1,0 +1,6 @@
+{
+            action: $action,
+            aggregation: $aggregation,
+            timeframe: $timeframe,
+            visit: $visit
+}

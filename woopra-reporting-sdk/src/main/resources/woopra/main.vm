@@ -1,0 +1,52 @@
+{
+  "website": "$website",
+  "date_format": "$dateFormat",
+  "start_day": "$startDate",
+  "end_day": "$endDate",
+  "limit": $limit,
+  "offset": $offset,
+  "segments": [
+   		#set( $count = 1 )
+    	#foreach( $segment in $segments )
+    		$segment
+    	    #if( $count < $segments.size())
+    	    ,
+    		#end
+    		
+    		#set( $count = $count + 1 )
+  		#end
+  ],
+  "report": {
+    "desc": $isDesc,
+    "columns": [
+		#set( $count = 1 )
+    	#foreach( $column in $columns )
+    		$column
+    	    #if( $count < $columns.size())
+    	    ,
+    		#end
+    		
+    		#set( $count = $count + 1 )
+  		#end    
+    ],
+    "icon": "$icon",
+    "limit": $reportLimit,
+    "group_by": [
+    	#set( $count = 1 )
+    	#foreach( $groupByItem in $groupByItems )
+    		$groupByItem
+    	    #if( $count < $groupByItems.size())
+    	    ,
+    		#end
+    		
+    		#set( $count = $count + 1 )
+  		#end 
+    ],
+    "order_by": "$orderBy",
+    "title": "$title",
+    "render": "$render",
+    "menu": "$menu"
+    $constraints
+ 
+  }
+}

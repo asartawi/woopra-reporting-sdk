@@ -1,0 +1,31 @@
+{
+  "website": "$website",
+  "date_format": "$dateFormat",
+  "start_day": "$startDate",
+  "end_day": "$endDate",
+  "limit": $limit,
+    goals: [
+    		#set( $count = 1 )
+    	    #foreach( $goal in $goals )
+				$goal
+				#if( $count < $goals.size())
+					,
+				#end
+				#set( $count = $count + 1 )
+			#end 
+    ],
+ 
+    "order_by": $orderBy,
+    "segments": [
+    	#set( $count = 1 )
+    	#foreach( $segment in $segments )
+    		$segment
+    	    #if( $count < $segments.size())
+    	    ,
+    		#end
+    		
+    		#set( $count = $count + 1 )
+  		#end
+    ],
+    "group_by": $groupByItems
+}
